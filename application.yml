@@ -1,0 +1,32 @@
+#######################Eureka 服务端配置#######################
+# 运行端口
+server:
+  port: 8761
+# eureka域名
+eureka:
+  instance:
+    hostname: peer1
+    prefer-ip-address: false
+  # eureka服务器端不注册eureka(默认true)
+  client:
+    registerWithEureka: false
+    # eureka服务器端不需要抓取服务列表(默认true)
+    fetchRegistry: false
+    # eureka注册url
+    serviceUrl:
+      defaultZone: http://peer2:8762/eureka/
+    healthcheck:
+      enabled: true
+  # eureka关闭自我防护(默认true)
+  server:
+    enable-self-preservation: false
+# 优先从文件系统加载template,解决eureka首页访问500错误
+spring:
+  freemarker:
+    prefer-file-system-access: false
+  application:
+    name: eureka-server
+security:
+  user:
+    password: sie2018!
+    name: derekd
