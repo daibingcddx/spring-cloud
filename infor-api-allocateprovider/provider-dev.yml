@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-client
+server:
+  port: 8792
+eureka:
+  client:
+    service-url:
+      defaultZone: http://derekd:sie2018!@peer1:8761/eureka/,http://derekd:sie2018!@peer2:8762/eureka/
+      #eureka-server的地址
+  instance:
+    prefer-ip-address: false  #eureka.instance.prefer-ip-address = true 就可以将IP注册到Eureka Server上，而如果不配置就是机器的主机名。
