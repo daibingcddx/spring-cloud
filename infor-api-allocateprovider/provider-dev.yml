@@ -1,1 +1,2 @@
-dev: hello,dev
+server:
+  port: 8794
