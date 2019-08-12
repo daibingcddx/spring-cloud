@@ -1,2 +1,6 @@
-server:
-  port: 8792
+eureka:
+  client:
+    service-url:
+      defaultZone: http://derekd:sie2018!@peer2:8762/eureka/,http://derekd:sie2018!@peer1:8761/eureka/
+  instance:
+    prefer-ip-address: false
