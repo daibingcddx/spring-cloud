@@ -3,3 +3,8 @@ eureka:
     serviceUrl:
       defaultZone: http://derekd:sie2018!@peer2:8762/eureka/,http://derekd:sie2018!@peer1:8761/eureka/
 info:  dev3
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
